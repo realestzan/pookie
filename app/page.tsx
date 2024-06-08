@@ -48,7 +48,7 @@ export default function BentoGridDemo() {
         <BentoGrid className="max-w-4xl h-[70vh] mt-[10vh] mx-auto md:auto-rows-[20rem]">
           {items.map((item, index) => (
             <BentoGridItem
-              key={i}
+              key={index}
               title={item.title}
               description={item.description}
               header={item.header}
