@@ -7,7 +7,6 @@ import Header from "@/components/header"
 import { FlipWordsDemo } from "@/components/flip-words-demo"
 import { GlowingStarsCard } from "@/components/glowing-stars-card"
 import { AnimatedPinDemo } from "@/components/animated-pin"
-import { auth } from "@/auth"
 
 export default function Page() {
 

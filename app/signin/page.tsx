@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { SparklesDemo } from "@/components/sparkles-demo"
 
-import { signIn } from "@/auth"
+import { signIn } from "@/lib/auth"
  
 
 export default function Signin() {

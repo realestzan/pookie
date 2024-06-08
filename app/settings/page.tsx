@@ -23,7 +23,7 @@ import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import Sidebar from "@/components/sidebar"
 import Header from "@/components/header"
-import { auth } from "@/auth"
+import { auth } from "@/lib/auth"
 import Image from "next/image"
 import { Label } from "@/components/ui/label"
 
