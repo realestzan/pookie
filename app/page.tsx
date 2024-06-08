@@ -46,7 +46,7 @@ export default function BentoGridDemo() {
         <GeminiEffectDemo />
 
         <BentoGrid className="max-w-4xl h-[70vh] mt-[10vh] mx-auto md:auto-rows-[20rem]">
-          {items.map((item, i) => (
+          {items.map((item, index) => (
             <BentoGridItem
               key={i}
               title={item.title}
