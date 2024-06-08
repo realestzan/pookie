@@ -50,8 +50,6 @@ import { GridBackgroundDemo } from "@/components/dot-background-demo"
 import { TextGenerateEffectDemo } from "@/components/text-generate-demo"
 import Header from "@/components/header"
 
-import CountryDropdown from "@/components/dropdown/countries";
-import StateDropdown from "@/components/dropdown/states";
 
   export default function Page() {
     return (

@@ -3,9 +3,10 @@ import { ThemeProvider } from "@/components/theme-provider"
 import type { Metadata } from "next";
 
 import "./globals.css";
-import { AuroraBackgroundDemo } from "./page";
+
 
 import { Inter } from 'next/font/google';
+import { AuroraBackgroundDemo } from "@/components/aurora-background-demo";
 
 const inter = Inter({
   weight: ['200', '300', '400', '500', '700'],
@@ -41,7 +42,7 @@ export default function RootLayout({
             {
               <>
                 <div className="fixed right-0 left-0 -z-10">
-                  <AuroraBackgroundDemo /> 
+                  {/* <AuroraBackgroundDemo />  */}
                   {/* <Vortex /> */}
                  </div>
               {children}

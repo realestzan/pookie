@@ -96,37 +96,6 @@
 
 
 
-// import { motion } from "framer-motion";
-// import { AuroraBackground } from "@/components/ui/aurora-background";
-
-// export function AuroraBackgroundDemo() {
-//   return (
-//     <AuroraBackground>
-//       <motion.div
-//         initial={{ opacity: 0.0, y: 40 }}
-//         whileInView={{ opacity: 1, y: 0 }}
-//         transition={{
-//           delay: 0.3,
-//           duration: 0.8,
-//           ease: "easeInOut",
-//         }}
-//         className="relative flex flex-col gap-4 items-center justify-center px-4"
-//       >
-//         {/* <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
-//           Background lights are cool you know.
-//         </div>
-//         <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
-//           And this, is chemical burn.
-//         </div>
-//         <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2">
-//           Debug now
-//         </button> */}
-//       </motion.div>
-//     </AuroraBackground>
-//   );
-// }
-
-
 
 
 
@@ -562,3 +531,83 @@
 //     </div>
 //   );
 // }
+
+import React from 'react'
+
+export default function Page() {
+  return (
+    <div>
+        <div>how are you </div>
+    </div>
+  )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 'use client'
+// import { Button } from '@/components/ui/button'
+// import { useRouter } from 'next/navigation'
+// import { useEffect, useState } from 'react'
+
+// const Error = () => {
+
+//   const router = useRouter();
+//   const [timeLeft, setTimeLeft] = useState(4);
+
+//   useEffect(() => {
+//     // Set up the interval to update the countdown every second
+//     const intervalId = setInterval(() => {
+//       setTimeLeft((prevTime) => prevTime - 1);
+//     }, 1000);
+
+//     // Clear the interval when the countdown reaches 0 or the component unmounts
+//     return () => clearInterval(intervalId);
+//   }, []);
+
+//   useEffect(() => {
+//     // Redirect when the countdown reaches 0
+//     if (timeLeft <= 0) {
+//       router.push('/');
+//     }
+//   }, [timeLeft, router]);
+
+//   return (
+//         <div>
+
+//             {/* <VortexDemo /> */}
+//             <div className="grid h-screen place-content-center">
+//     <div className="text-center">
+//       <h1 className="text-9xl font-black text-gray-200">40{timeLeft}s</h1>
+  
+//       <p className="text-2xl font-bold tracking-tight text-primary sm:text-4xl">Uh-oh!</p>
+  
+//       <p className="mt-4 text-gray-500">We cant find that page.</p>
+//       <p className="text-gray-500">Automatical go back in {timeLeft}s...</p>
+  
+//       <Button
+//         variant="default"
+//         className="mt-8"
+//         onClick={() => router.back()}
+//       >
+//         Go Back Home
+//       </Button>
+//     </div>
+//   </div>
+
+//         </div>
+//   )
+// }
+
+// export default Error

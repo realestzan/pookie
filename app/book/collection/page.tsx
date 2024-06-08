@@ -6,7 +6,6 @@ import { TracingBeam } from '@/components/ui/tracing-beam';
 import { TextGenerateEffectDemo } from '@/components/text-generate-demo';
 import FocusButton from '@/components/focus-button';
 import Image from 'next/image';
-import { EvervaultCardDemo } from '@/app/page';
 import books from '@/lib/data';
 import { Button } from '@/components/ui/aurora-button';
 import { FlipWordsDemo } from '@/components/flip-words-demo';

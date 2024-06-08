@@ -3,8 +3,8 @@ import React from "react";
 import { Button } from "@/components/ui/aurora-button";
 
 interface Props { 
-  css: string,
-  text: string
+  css?: string,
+  text?: string
 }
 export function AuroraButtonDemo({css, text}: Props) {
   return (
