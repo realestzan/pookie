@@ -7,12 +7,10 @@
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
         "node_modules": true,
-        ".eslintrc.json": true,
         "package-lock.json": true
     },
     "hide-files.files": [
         "node_modules",
-        ".eslintrc.json",
         "package-lock.json"
     ]
 }
