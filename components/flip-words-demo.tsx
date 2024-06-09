@@ -4,7 +4,7 @@ interface Props {
     text1: string,
     words: string[],
     text2: string,
-    css: string
+    css?: string
   }
   
   export function FlipWordsDemo({text1, words, text2, css} : Props) {

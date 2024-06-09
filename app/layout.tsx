@@ -6,7 +6,7 @@ import "./globals.css";
 
 
 import { Inter } from 'next/font/google';
-import { AuroraBackgroundDemo } from "@/components/aurora-background-demo";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 const inter = Inter({
   weight: ['200', '300', '400', '500', '700'],
@@ -40,15 +40,11 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {
-              <>
-                <div className="fixed right-0 left-0 -z-10">
-                  {/* <AuroraBackgroundDemo />  */}
-                  {/* <Vortex /> */}
-                 </div>
-              {children}
-              </>
-              
+              <div className="fixed right-0 left-0 top-0 bottom-0 -z-10">
+                  <AuroraBackground><div></div></AuroraBackground>
+              </div>
             }
+            {children}
           </ThemeProvider>
         </body>
     </html>
