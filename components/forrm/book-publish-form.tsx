@@ -77,7 +77,7 @@ import Dialog from "../headless/dialog"
 import HLDialog from "../headless/dialog"
 
 interface Props { 
-  userId: number;
+  userId: number | undefined;
 }
   
 const BookUPublishForm: React.FC<Props> = ({userId}) => {

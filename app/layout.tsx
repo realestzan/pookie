@@ -3,8 +3,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Inter, Montserrat } from 'next/font/google';
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import { MantineProvider } from "@mantine/core";
-
 
 const inter = Inter({
   weight: ['200', '300', '400', '500', '700'],
@@ -44,16 +42,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* <MantineProvider> */}
           {
             <div className="fixed right-0 left-0 top-0 bottom-0 -z-10">
-              {/* <AuroraBackground><div></div></AuroraBackground> */}
+              <AuroraBackground><div></div></AuroraBackground>
             </div>
           }
           {/* <AppContext.Provider value={user}> */}
             {children}
           {/* </AppContext.Provider> */}
-          {/* </MantineProvider> */}
         </ThemeProvider>
       </body>
     </html>

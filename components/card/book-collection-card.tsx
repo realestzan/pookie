@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 
 interface BookCollectionCardProps {
-    books: SelectBook[];
+    books: InsertBook[];
   }
 
 const BookCollectionCard: React.FC<BookCollectionCardProps> = ({ books }) => {

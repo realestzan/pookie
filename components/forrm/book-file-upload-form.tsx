@@ -16,6 +16,13 @@ import { OurFileRouter } from '@/app/api/uploadthing/core';
 
 
 const FileUploadForm: React.FC = () => {
+
+    type ProgressData = {
+        extract: number;
+        podcast: number;
+      };
+
+      
     const [isDialog, setIsDialog] = useState(false)
     const [dialogContent, setDialogContent] = useState({
         title: 'Dialog Title',
@@ -40,17 +47,19 @@ const FileUploadForm: React.FC = () => {
     };
 
     useEffect(() => {
-        const socket = io('http://localhost:4000')
-
-        socket.on('progress', (data) => {
-            setExtractProgress(data.extract);
-            console.log('Progress:', data.extract);
-            setPodcastProgress(data.podcast);
-            console.log('Podcast',data.podcast);
+        const socket = io('http://localhost:4000');
+      
+        socket.on('progress', (data: {extract: number, podcast: number}) => {
+          setExtractProgress(data.extract);
+          console.log('Progress:', data.extract);
+          setPodcastProgress(data.podcast);
+          console.log('Podcast:', data.podcast);
         });
-
-        return () => socket.disconnect();
-    }, []);
+      
+        return () => {
+          socket.disconnect();
+        };
+      }, []);
 
     async function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -79,10 +88,10 @@ const FileUploadForm: React.FC = () => {
                 const data = await response.json();
 
                 // Process extracted texts into a more usable format
-                const processedTexts = Object.entries(data.texts).map(([page, content]) => ({
+                const processedTexts: { page: string, content: string }[] = Object.entries(data.texts).map(([page, content]) => ({
                     page,
-                    content
-                }));
+                    content: content as string // Cast content to string
+                  }));
 
                 setExtractedText(processedTexts);
                 setCoverImageUrl(data.cover_image);
