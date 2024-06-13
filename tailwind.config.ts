@@ -1,4 +1,8 @@
 import type { Config } from "tailwindcss"
+// import { withUt } from 'uploadthing/tw'
+// module.exports = withUt({
+//   ''
+// });
 
 
 // Grid - Dots BG

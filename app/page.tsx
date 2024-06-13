@@ -1,3 +1,20 @@
+
+// 'use client'
+// import HLDialog from '@/components/headless/dialog'
+// import React, { useState } from 'react'
+
+// const Page = () => {
+//   const [isOpen, setIsOpen] = useState(false)
+//   return (
+//     <div className='h-[100vh]'>
+//       <div className="text-6xl my-auto mt-[20vh] ml-[40vw]" onClick={() => {setIsOpen(true)}}>HELLO PTHUY</div>
+//       <HLDialog isOpen={isOpen} setIsOpen={setIsOpen} />
+//     </div>
+//   )
+// }
+
+// export default Page
+
 "use client";
 import { motion } from "framer-motion";
 import React from "react";
@@ -32,7 +49,7 @@ export default function Page() {
       <TracingBeam >
 
         <div className="h-[100vh] flex items-center top-0">
-          <div className="basis-1/2 h-[100vh] rounded-5xl p-20 rounded-full"><SparklesDemo text="Pookie for bookies" /></div>
+          <div className="basis-1/2 h-[100vh] p-20 overflow-hidden"><SparklesDemo text="Pookie for bookies" /></div>
 
           <div className="basis-1/2 flex flex-col items-center">
             <AnimatedPinDemo />

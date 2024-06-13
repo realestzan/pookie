@@ -3,18 +3,19 @@ import { addBook } from '@/lib/operations';
 
 export async function POST(req: NextRequest) {
   try {
-    const { id, title, author, description, language, isbn, cover_image, reviewer, review, pages } = await req.json();
+    const { id, createdAt, createdBy, title, author, description, language, cover_image, pages } = await req.json();
 
     await addBook({
-      id,
+      // id,
+      createdAt: new Date(),
+      createdBy,
+
       title,
       author,
       description,
+
       language,
-      isbn,
       cover_image,
-      reviewer,
-      review,
       pages,
     });
 

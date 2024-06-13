@@ -1,9 +1,9 @@
 import { FlipWords } from "./ui/flip-words";
 
 interface Props { 
-    text1: string,
-    words: string[],
-    text2: string,
+    text1?: string,
+    words?: string[],
+    text2?: string,
     css?: string
   }
   

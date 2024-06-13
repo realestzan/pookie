@@ -125,9 +125,10 @@ const BookUploadTable = async () => {
                   </TableRow>
                 </TableHeader>
 
+                <TableBody>
 
-                  {/* <div>{JSON.stringify(books)}</div> */}
-                      {
+                  
+                {
                         books.map((book) => { 
                           return ( 
                             <TableRow key={book.id}>
@@ -151,27 +152,6 @@ const BookUploadTable = async () => {
                           )
                         })
                       }
-
-
-                <TableBody>
-                  <TableRow>
-                    <TableCell>
-                      <div className="font-medium">The Subtle Art of Not Giving a F*ck</div>
-                      <div className="hidden text-sm text-muted-foreground md:inline">
-                        JK Rolling
-                      </div>
-                    </TableCell>
-                    <TableCell className="hidden sm:table-cell">
-                      324
-                    </TableCell>
-                    <TableCell className="hidden sm:table-cell">
-                      <Progress value={33} color="red" className="bg-primary-foreground min-w-[20vw]" />
-                    </TableCell>
-                    <TableCell className="hidden md:table-cell">
-                      <Badge>93% Completed</Badge>
-                    </TableCell>
-                    <TableCell className="text-right">2023-06-23</TableCell>
-                  </TableRow>
 
 
                 </TableBody>

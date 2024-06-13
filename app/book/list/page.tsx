@@ -2,7 +2,7 @@ import Sidebar from "@/components/sidebar";
 import Header from "@/components/header";
 import { neon } from '@neondatabase/serverless';
 import { Input } from "@/components/ui/aurora-input";
-import { Button } from "@/components/ui/aurora-button";
+import { AuroraButton } from "@/components/ui/aurora-button";
 import db from "@/lib/drizzle";
 import { book } from "@/lib/schema";
 
@@ -82,7 +82,7 @@ export default async function Settings() {
           <Input type="text" placeholder="Cover Image URL" name="coverImage" />
           <Input type="text" placeholder="Reviewer" name="reviewer" />
           <Input type="text" placeholder="Review" name="review" />
-          <Button type="submit">Submit</Button>
+          <AuroraButton type="submit">Submit</AuroraButton>
         </form>
       </main>
     </div>

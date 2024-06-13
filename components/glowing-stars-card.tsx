@@ -11,12 +11,13 @@ interface Props {
   text: string,
   img: string,
   desc: string
+  css? : string
 }
 
-export function GlowingStarsCard({text, img, desc} : Props) {
+export function GlowingStarsCard({text, img, desc, css} : Props) {
   return (
-    <div className="flex items-center justify-center antialiased">
-      <GlowingStarsBackgroundCard className="relative px-10">
+    <div >
+      <GlowingStarsBackgroundCard className={`relative px-10 ${css}`}>
         <Image className="rounded-3xl absolute top-0  m-10 left-0" src={img} height={100} width={100} alt='book'/>
         <GlowingStarsTitle>{text}</GlowingStarsTitle>
         <div className="flex justify-between items-end">
